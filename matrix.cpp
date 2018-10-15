@@ -2,11 +2,6 @@
 #include "matrix.h"
 
 Matrix::Matrix() {
-	rows=1;
-	cols=1;
-
-	matrix = new double*[rows];
-	matrix[rows-1][cols-1] = 0;
 }
 
 Matrix::Matrix(int numRows, int numCols) {
@@ -56,7 +51,7 @@ Matrix* operator+(const Matrix &matrix1, const Matrix &matrix2) {
 
 Matrix* operator-(const Matrix &matrix1, const Matrix &matrix2) {
 	if ((matrix1.rows != matrix2.rows) || (matrix1.cols != matrix2.cols)) {
-		std::cout << "You cannot add two matrices of different sizes.";
+		std::cout << "You cannot subtract two matrices of different sizes.";
 		exit (EXIT_FAILURE);
 	} else {
 		Matrix *tempMatrix  = new Matrix(matrix1.rows, matrix1.cols);

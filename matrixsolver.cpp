@@ -49,24 +49,28 @@ int main() {
 		sum = *matrixA + *matrixB;
 		std::cout << "\nA + B =" << std::endl;
 		sum->printMatrix();
+		delete sum;
 	} else if (toDo == 2) {
 		Matrix *difference;
 
 		difference = *matrixA - *matrixB;
 		std::cout << "\nA - B =" << std::endl;
 		difference->printMatrix();
+		delete difference;
 	} else if (toDo == 3) {
 		Matrix *product;
 
 		product = (*matrixA) * (*matrixB);
 		std::cout << "\nA * B =" << std::endl;
 		product->printMatrix();
+		delete product;
 	} else if (toDo == 4) {
 		Matrix *coeff;
 
 		coeff = 2 * (*matrixA);
 		std::cout << "\n2A = " << std::endl;
 		coeff->printMatrix();
+		delete coeff;
 	} else {
 		std::cout << "Unrecognized input. Terminating program.";
 	}
